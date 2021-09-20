@@ -1,0 +1,49 @@
+<!-- Carlos Duarte r0841640 1ITF6-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Visitor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+
+</head>
+<body class="bg-light">
+<header>
+    <h1 class="text-center card-header">Make a new visitor</h1>
+</header>
+<div class="container">
+    <form action="/submitnewvisitor" method="post" class="mt-5 text-center">
+        <div class="d-flex flex-column">
+            <div class="form-group">
+                <input type="text" name="name" id="name" class="form-control-lg" placeholder="First name"
+                       aria-label="First name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="surname" id="surname" class="form-control-lg" placeholder="Surname"
+                       aria-label="Surname">
+            </div>
+            <div class="form-group">
+                <input type="text" name="year" id="year" class="form-control-lg" placeholder="Year of Birth"
+                       aria-label="Year of Birth">
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center mr-5 mt-4">
+            <div th:each="park :${themeparks}" class="form-check m-3">
+                <label for="park" class="form-check-label"><span th:text="${park.getName()}"></span></label>
+                <input type="radio" name="park" id="park" class="form-check-input ml-3"
+                       th:checked="${parkStat.index} == 0"
+                       th:value="${parkStat.index}">
+
+            </div>
+        </div>
+        <div class="float-right">
+            <input type="submit" name="submit" value="Continue and generate park code" class="btn btn-secondary mt-2">
+        </div>
+    </form>
+    <p class="mt-5"><a class="text-dark" href="/">Back to home page</a></p>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

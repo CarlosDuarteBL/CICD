@@ -1,0 +1,25 @@
+<!-- Carlos Duarte r0841640 1ITF6-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search attraction</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+</head>
+<body class="bg-light">
+<div class="container">
+    <h3 class="mt-5">We found this attraction: <span th:text="${attraction.getName()}"></span></h3>
+    <div class="mt-3">
+        <p class="font-weight-bold">Responsible: <span
+                th:text="${attraction.getResponsible().getFirstName()} + ' ' + ${attraction.getResponsible().getSurName()}"></span>
+        </p>
+        <img onerror="this.src='img/noimage.jpg'" th:src="@{${attraction.getPhoto()}}" height="200" width="270"
+             class="img-thumbnail img-fluid bg-secondary d-flex justify-content-center">
+        <p class="mt-5"><a class="text-dark" href="/">Back to home page</a></p>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

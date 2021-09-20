@@ -1,0 +1,40 @@
+<!-- Carlos Duarte r0841640 1ITF6-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Visitors</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+</head>
+<body>
+<div class="container">
+    <h1 class="card-header">Our visitors:</h1>
+    <ol class="row ml-auto">
+        <li th:each="visitor : ${visitors}" class="col-6 mt-5">
+            <span th:text="${visitor.getFirstName()} + ' ' + ${visitor.getSurName()}"> </span>
+            <ul>
+                <li>
+                    year of birth: <span th:text="${visitor.getYearOfBirth()}"></span>
+                </li>
+                <li>
+                    park code: <span th:text="${visitor.getThemeParkCode()}"></span>
+                </li>
+                <li>
+                    wish list:
+                    <ul>
+                        <li th:each="i : ${visitor.getWishList()}">
+                        <span th:text="${i}">
+                        </span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <p class="mt-5"><a class="text-dark" href="/">Back to home page</a></p>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

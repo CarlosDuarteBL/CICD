@@ -1,0 +1,25 @@
+<!-- Carlos Duarte r0841640 1ITF6-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Theme park list</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+</head>
+<body class="bg-light">
+<div class="container">
+    <h1 class="card-header">Theme parks (and number of attractions)</h1>
+    <ul class="mt-5">
+        <li th:each="park : ${themeparks}">
+            <a th:href="@{/attractions(parkIndex=${parkStat.index})}"
+               th:text="${park.getName()} + ' (' + ${park.getNumberOfAttractions() + ')'}" class="text-dark"></a>
+        </li>
+
+    </ul>
+    <p class="mt-5"><a class="text-dark" href="/">Back to home page</a></p>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

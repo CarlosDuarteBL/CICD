@@ -1,0 +1,27 @@
+<!-- Carlos Duarte r0841640 1ITF6-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New theme park</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+</head>
+<body class="bg-light">
+<header>
+    <h1 class="card-header text-center">Make a New Theme Park</h1>
+</header>
+<div class="container mt-3">
+    <form action="/submitpark" method="post" class="text-center">
+        <div class="form-group">
+            <input type="text" name="parkName" id="parkName" class="form-control-lg" placeholder="Theme Park Name"
+                   aria-label="Theme Park Name">
+        </div>
+        <input type="submit" name="confirm" value="Confirm theme park" class="btn btn-secondary mx-auto ml-2">
+    </form>
+    <p class="mt-2"><a class="text-dark" href="/">Back to home page</a></p>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

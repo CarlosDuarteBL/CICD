@@ -1,0 +1,56 @@
+<!-- Carlos Duarte r0841640 1ITF6-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Theme Park start</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+</head>
+<body class="bg-light">
+<header>
+    <h1 class="card-header text-center">Theme Park by Carlos Duarte</h1>
+    <nav class="container-fluid navbar navbar-expand-lg navbar-dark bg-secondary mt-1">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="/newvisitor" class="text-dark nav-link">New Visitor</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/newstaffmember" class="text-dark nav-link">New Staff Member</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/memberslist" class="text-dark nav-link">Our Staff</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/visitorslist" class="text-dark nav-link">Our Visitors</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/newthemepark" class="text-dark nav-link">New Theme Park</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/themeparklist" class="text-dark nav-link">Theme Park List</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/newattraction" class="text-dark nav-link">New attraction</a>
+                </li>
+                <li class="nav-item">
+                    <form action="searchname" method="get" class="d-flex">
+                        <input class="form-control ml-4" type="search" id="search" name="search"
+                               aria-label="Search for an attraction">
+                        <button class="btn btn-outline-dark ml-2" type="submit">Search</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

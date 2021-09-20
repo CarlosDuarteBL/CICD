@@ -1,0 +1,20 @@
+<!-- Carlos Duarte r0841640 1ITF6-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Showvisitor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h3 class="text-center">Welcome</h3>
+    <p class="text-center">Welcome <span th:text="${visitor.toString()}"></span></p>
+    <p class="mt-5 text-dark"><a class="text-dark" href="/">Back to home page</a></p>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

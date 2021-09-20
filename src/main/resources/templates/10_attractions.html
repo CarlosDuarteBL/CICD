@@ -1,0 +1,29 @@
+<!-- Carlos Duarte r0841640 1ITF6-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" content="text/html; charset=UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <title>Attractions</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="img/style.css"/>
+</head>
+<body class="bg-light">
+<div class="container">
+    <h1>Attractions of <span th:text="${themepark.getName()} "></span></h1>
+    <ol class="row">
+        <li th:each="th : ${themepark.getAttractions()}" class="col-lg-6 mt-4">
+            <span
+                    th:text="${th.getName()} + ' -responsible: ' + ${th.getResponsible().getFirstName() + ' ' + th.getResponsible().getSurName()}">
+            </span>
+            <p th:text="'Duration: ' + ${th.getDuration()} + ' seconds'"></p>
+            <p><img onerror="this.src='img/noimage.jpg'" th:src="@{${th.getPhoto()}}" height="200" width="270"
+                    class="img-fluid img-thumbnail bg-secondary mt-2"/></p>
+        </li>
+
+    </ol>
+    <p class="mt-5"><a class="text-dark" href="/">Back to home page</a></p>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
